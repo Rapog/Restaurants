@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Places</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body style="background-color:peru;">
+<h4>Total: {{.Total}}</h4>
+<ul>
+    {{ range .Places}}
+    <li>
+        <div> {{.Name}} </div>
+        <div> {{.Address}} </div>
+        <div> {{.Phone}} </div>
+    </li>
+    {{end}}
+</ul>
+<a href="/?page={{.PrevPage}}">Previous</a>
+<a href="/?page={{.NextPage}}">Next</a>
+<a href="/?page={{.Pages}}">Last</a>
+</body>
+</html>
